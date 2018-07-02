@@ -15,11 +15,12 @@ service:
 
 nginx-ingress:
   controller:
-    service:
-        type: NodePort 
-        nodePorts:
-          http: 30001
-
+#    service:
+#        type: NodePort 
+#        nodePorts:
+#          http: 30001
+    deamonset:
+      useHostPort: true
 minio:
   persistence:
     enabled: false
