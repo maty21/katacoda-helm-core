@@ -15,8 +15,13 @@ service:
 
 nginx-ingress:
   controller:
+    hostNetwork: true
     kind: DaemonSet
-#    service:
+    service:
+      type: NodePort
+      nodePorts:
+        http: 32080
+        https: 31443    
 #        type: NodePort 
 #        nodePorts:
 #          http: 30001
