@@ -20,7 +20,7 @@ nginx-ingress:
 #        type: NodePort 
 #        nodePorts:
 #          http: 30001
-    deamonset:
+    daemonset:
       useHostPort: true
       http: 80
       httpa: 443
