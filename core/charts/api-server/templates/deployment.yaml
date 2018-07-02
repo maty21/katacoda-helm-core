@@ -33,7 +33,7 @@ spec:
             - name: NODE_ENV
               value: {{ .Values.env.node_env }}
             - name: ADD_DEFAULT_ALGORITHM
-              value: {{ .Values.env.add_default_algorithm }}
+              value: {{quote .Values.env.add_default_algorithm }}
             - name: BASE_URL_PATH
               value: {{ .Values.env.base_url_path }}
             - name: AWS_ACCESS_KEY_ID
