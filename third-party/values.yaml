@@ -15,12 +15,16 @@ service:
 
 nginx-ingress:
   controller:
+    kind: DaemonSet
 #    service:
 #        type: NodePort 
 #        nodePorts:
 #          http: 30001
     deamonset:
       useHostPort: true
+      http: 80
+      httpa: 443
+
 minio:
   persistence:
     enabled: false
