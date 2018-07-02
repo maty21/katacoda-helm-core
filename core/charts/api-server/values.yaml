@@ -17,7 +17,7 @@ service:
   port: 3000
 
 env:
-  add_default_algorithm: true
+  add_default_algorithm: false
   node_env: "production"
   metrics_port: "3000"
   base_url_path: "/hkube/api-server"
