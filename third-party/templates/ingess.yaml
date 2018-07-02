@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-nginx
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  # tls:
+  # # This assumes tls-secret exists.
+  # - secretName: tls-secret
+  rules:
+  - http:
+      paths:
+        - path: /hkube/api-server
+          backend:
+            serviceName: api-server
+            servicePort: 3000
+        - path: /hkube/simulator
+          backend:
+            serviceName: simulator
+            servicePort: 9050
+        - path: /hkube/monitor-server
+          backend:
+            serviceName: monitor-server
+            servicePort: 30010
+        - path: /hkube/webhook-stub-ui
+          backend:
+            serviceName: webhook-stub-ui
+            servicePort: 3002
+        - path: /hkube/jaeger
+          backend:
+            serviceName: jaeger-query
+            servicePort: 16686
