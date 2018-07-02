@@ -17,6 +17,8 @@ nginx-ingress:
   controller:
     service:
         type: NodePort 
+        nodePorts:
+          http: 30001
 
 minio:
   persistence:
