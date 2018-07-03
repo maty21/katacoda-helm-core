@@ -38,8 +38,8 @@ affinity: {}
 systemversion: 1.1.237
 
 api-server:
-     image:
-       tag: v1.1.56
+  image:
+    tag: v1.1.56
 worker:
   image:
     tag: v1.1.29
