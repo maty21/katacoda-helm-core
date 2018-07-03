@@ -78,7 +78,7 @@ trigger-service:
     tag: v1.1.12
 algorithm-operator:
   image:
-    tag: v1.1.8
+    tag: v1.1.9
 clean-old-jobs:
   image:
     tag: v1.1.1
