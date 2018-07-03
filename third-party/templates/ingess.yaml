@@ -14,7 +14,7 @@ spec:
       paths:
         - path: /hkube/api-server
           backend:
-            serviceName: api-server
+            serviceName: core-api-server
             servicePort: 3000
         - path: /hkube/simulator
           backend:
