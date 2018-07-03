@@ -17,6 +17,7 @@ env:
   NODE_ENV: kube
   METRICS_PORT: "3000"
   
+  
 lables:
    group:
      value: hkube
